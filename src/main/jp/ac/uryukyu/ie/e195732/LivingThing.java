@@ -6,13 +6,13 @@ package jp.ac.uryukyu.ie.e195732;
  *  int hitPoint; //生物のHP
  *  int attack; //生物の攻撃力
  *  boolean dead; //生物の生死状態。true=死亡。
- * Created by tnal on 2019/11/23.
+ * Created by Yuto on 2019/11/23.
  */
 public class LivingThing {
-    String name;
-    int hitPoint;
-    int attack;
-    boolean dead;
+    private String name;
+    private int hitPoint;
+    private int attack;
+    private boolean dead;
 
     public LivingThing(String name, int hitPoint, int attack){
         this.name = name;
@@ -26,12 +26,37 @@ public class LivingThing {
      * getterメソッドと同等。生死をboolean表現しているためメソッド名をisDead()とした。
      * @return boolean
      */
+
     public boolean isDead(){
         return dead;
     }
 
+    public void setDead(boolean dead) {
+        this.dead = dead;
+    }
+
     public String getName(){
         return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAttack() {
+        return attack;
+    }
+
+    public void setAttack(int attack) {
+        this.attack = attack;
+    }
+
+    public int getHitPoint() {
+        return hitPoint;
+    }
+
+    public void setHitPoint(int hitPoint) {
+        this.hitPoint = hitPoint;
     }
 
     /**
